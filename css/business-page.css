@@ -1,0 +1,194 @@
+/* Import Font Awesome for the search icon */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+* {
+  font-family: poppins;
+}
+
+/* HEADER*/
+
+nav {
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 5%;
+  padding-right: 100px;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%; /* Make the image width 100% of its container */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu a:hover {
+  background-color: #3EB489;
+  color: white;
+  padding: 10px;
+}
+
+/* Style the search bar container */
+.search-bar {
+  display: flex;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* Style the search input */
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 4px;
+}
+
+/* Style the search button */
+.search-bar button {
+  background-color: #3EB489;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* MAIN */
+
+/* Styling for the hero header */
+.hero {
+    background-image: url("../images/Carrefour.jpeg");
+    background-size: cover;
+    background-position: top center;
+    height: fit-content;
+    background-size: cover;
+    text-align: left;
+    padding: 200px;
+    color: #fff;
+  }
+  .hero h1 {
+    font-size: 70px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .hero h4 {
+    font-size: 40px;
+  }
+
+  .reviews {
+    display: flex;
+    align-items: center;
+  }
+
+  .review-list {
+    display: flex;
+    flex-direction: row; /* Display items vertically */
+    list-style: none;
+  }
+  
+  .review-list li {
+    margin: 10px; /* Add some spacing between list items */
+    border: 1px solid #ccc; /* Add borders for better separation */
+    padding: 10px; /* Add padding for better readability */
+  }
+  
+  /* Style the links for the reviews */
+  .reviews a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Style the links on hover */
+  .reviews a:hover {
+    text-decoration: underline;
+    color: #0055aa;
+  }
+  
+
+/* FOOTER */
+footer {
+    background-color: #f370b8;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Style for the "Contact us" section */
+  footer section {
+    margin-bottom: 20px;
+  }
+  
+  footer section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the social icons */
+  .social {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-item {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .social-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Style for the copyright notice */
+  footer p:last-child {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  /* Style for the "Terms and conditions" link */
+  .footer-nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .footer-nav-link:hover {
+    text-decoration: underline;
+  }
+  

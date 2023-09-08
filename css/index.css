@@ -6,6 +6,7 @@
 }
 
 /* HEADER*/
+
 nav {
   display: flex;
   height: 70px;
@@ -82,11 +83,13 @@ nav {
   cursor: pointer;
 }
 
+/* MAIN */
+
 /* Styling for the hero header */
 .hero {
-  background-image: url("../images/Nairobi_skyline.jpg");
+  background-image: url("../images/Nairobi.jpg");
   background-size: cover;
-  background-position: bottom center;
+  background-position: top center;
   height: fit-content;
   background-size: cover;
   text-align: left;
@@ -170,7 +173,13 @@ nav {
   color: #333; /* Set link text color */
 }
 
-.weekly-picks-list li a img {
+/* .weekly-picks-list li a figure {
+  width: 400px; /* Set your desired width */
+  /*height: 500px; /* Set your desired height */
+ /*overflow: hidden;
+} */
+
+.weekly-picks-list li a figure img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -202,7 +211,7 @@ nav {
   color: #0055aa;
 }
 
-/* Style for the footer */
+/* FOOTER */
 footer {
   background-color: #f370b8;
   color: #fff;
@@ -255,4 +264,3 @@ footer p:last-child {
 .footer-nav-link:hover {
   text-decoration: underline;
 }
-
