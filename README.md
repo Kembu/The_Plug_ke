@@ -34,7 +34,7 @@ It is also a platform that allows users to post places that may be handy to othe
 ## Contributors
 Allan Too
 
-Wangare Kamonde
+Wangari Kamonde
 
 Anne Njuguna
 
