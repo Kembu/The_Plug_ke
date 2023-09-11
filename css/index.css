@@ -3,11 +3,12 @@
 
 * {
   font-family: poppins;
+  scroll-behavior: smooth;
 }
 
 /* HEADER*/
 
-nav {
+.navbar {
   display: flex;
   height: 70px;
   justify-content: space-between;
@@ -105,86 +106,43 @@ nav {
   text-align: center;
   background-color: #ffffff;
 }
-/* Style the weekly-picks section container */
-.weekly-picks {
-  background-color: #f0f0f0;
-}
 
-/* Style the weekly-picks section container */
-.weekly-picks {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center; /* Center the text within the container */
-  max-width: 100%; /* Set a maximum width to fit the viewport */
-  margin: 0 auto; /* Center the container horizontally */
-  box-sizing: border-box; /* Ensure padding is included in the width */
-}
-
+/* Styling for the main body weekly picks container */
 .Weekly-picks-container {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
   align-items: left; /* Center items horizontally in the container */
 }
 
-/* Style the list of weekly-picks */
 .weekly-picks-list {
+  display: flex;
+  flex-direction: row; /* Display items vertically */
   list-style: none;
-  justify-content: space-between; /* Spread items evenly throughout the width */
 }
 
-/* Style each weekly-pick item */
 .weekly-picks-list li {
-  width: calc(33.33% - 20px); /* Adjust the width of each item */
-  margin-bottom: 20px; /* Add some spacing between items */
-  padding: 10px; /* Add padding to each item */
-  border: 1px solid #ddd; /* Add a border to each item */
-  border-radius: 5px; /* Add rounded corners */
-  text-align: center; /* Center the text within each item */
+  margin: 10px; /* Add some spacing between list items */
+  border: 1px solid #ccc; /* Add borders for better separation */
+  padding: 10px; /* Add padding for better readability */
 }
 
-/* Style the links for the weekly-picks */
-.weekly-picks-list a {
+.weekly-picks-list li a {
   text-decoration: none;
   color: #0077cc;
   font-weight: bold;
+  text-decoration: none; /* Remove underlines from links */
+  color: #333; /* Set link text color */
 }
 
-/* Style the links on hover */
 .weekly-picks-list a:hover {
   text-decoration: underline;
   color: #0055aa;
 }
 
-.weekly-picks-list {
-  display: flex; /* Turn the list into a flex container */
-  flex-direction: row; /* Arrange items horizontally */
-  list-style: none; /* Remove list bullets */
-  padding: 0; /* Remove default padding */
-  justify-content: space-between;
+.weekly-picks-list img {
+  max-width: 40%;
+  height: auto;
 }
 
-.weekly-picks-list li {
-  margin-right: 10px; /* Add some spacing between list items */
-}
-
-/* Additional styles for the links */
-.weekly-picks-list li a {
-  text-decoration: none; /* Remove underlines from links */
-  color: #333; /* Set link text color */
-}
-
-/* .weekly-picks-list li a figure {
-  width: 400px; /* Set your desired width */
-  /*height: 500px; /* Set your desired height */
- /*overflow: hidden;
-} */
-
-.weekly-picks-list li a figure img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
+/* Styling for review list */
 .review-list {
   display: flex;
   flex-direction: row; /* Display items vertically */
@@ -195,72 +153,63 @@ nav {
   margin: 10px; /* Add some spacing between list items */
   border: 1px solid #ccc; /* Add borders for better separation */
   padding: 10px; /* Add padding for better readability */
-  
 }
 
-/* Style the links for the reviews */
+.review-list li img {
+  width: 40%;
+  height: auto;
+}
+
 .reviews a {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
-/* Style the links on hover */
 .reviews a:hover {
   text-decoration: underline;
   color: #0055aa;
 }
 
-/* FOOTER */
+/** FOOTER **/
 footer {
   background-color: #f370b8;
   color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  padding: 20px;
 }
 
-/* Style for the "Contact us" section */
-footer section {
-  margin-bottom: 20px;
+.contact-us {
+  display: flex;
+  align-items: center;
 }
 
-footer section p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* Style for the social icons */
 .social {
   list-style: none;
-  padding: 0;
 }
 
 .social-item {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 30px;
 }
 
-.social-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-/* Style for the copyright notice */
-footer p:last-child {
-  font-size: 14px;
-  margin-top: 20px;
+.copyright p {
+  text-align: center;
 }
 
 /* Style for the "Terms and conditions" link */
 .footer-nav-link {
+  float: right;
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  margin-top: 10px;
-  display: block;
 }
 
 .footer-nav-link:hover {
   text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .custom_body {
+    grid-template-columns: 1fr;
+  }
 }

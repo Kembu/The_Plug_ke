@@ -7,6 +7,11 @@ html {
   color:#ffffff;
 }
 
+.logo a img {
+  width: 25%; /* Make the image width 5% of its container */
+  padding: 20px;
+}
+
 .container {
   text-align: center;
   background: black;
