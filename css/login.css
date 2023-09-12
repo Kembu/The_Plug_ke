@@ -3,7 +3,9 @@
 body,
 html {
   font-family: "Source Sans Pro", sans-serif;
-  background: #89cff0;
+  background: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color:#ffffff;
 }
 
