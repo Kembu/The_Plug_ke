@@ -184,6 +184,10 @@ footer {
   background-color: #f370b8;
   color: #fff;
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap to the next line if needed */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact-us {
@@ -193,27 +197,33 @@ footer {
 
 .social {
   list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Add spacing between social icons */
 }
 
 .social-item {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
-.copyright p {
+.copyright {
   text-align: center;
+  flex-grow: 1;
+  padding-right: 10px;
 }
 
 /* Style for the "Terms and conditions" link */
 .footer-nav-link {
-  float: right;
   color: #fff;
   text-decoration: none;
+  margin-left: 10px; /* Add spacing between "Copyright" and the link */
 }
 
 .footer-nav-link:hover {
   text-decoration: underline;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
