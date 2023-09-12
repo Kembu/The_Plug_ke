@@ -10,7 +10,6 @@
 
 .navbar {
   display: flex;
-  height: 70px;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
@@ -19,13 +18,15 @@
 }
 
 .logo {
-  width: 15%;
-  padding-right: 100px;
+  /* Remove the width property and adjust max-width to make it smaller */
+  max-width: 150px; /* Adjust this value as needed to make the logo smaller */
+  padding-right: 20px;
   overflow: hidden;
 }
 
 .logo img {
-  width: 100%;
+  /* Set the max-width to ensure the logo scales proportionally */
+  max-width: 100%;
   height: auto;
 }
 
@@ -96,6 +97,7 @@
   text-align: left;
   padding: 200px;
   color: #fff;
+  margin-top: 20px; /* Add margin to separate the hero from the navbar */
 }
 
 .hero p {
@@ -108,6 +110,8 @@
   text-align: center;
   background-color: #ffffff;
 }
+
+
 
 /* Styling for the main body weekly picks container */
 .Weekly-picks-container {
