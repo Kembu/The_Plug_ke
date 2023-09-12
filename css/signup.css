@@ -3,10 +3,10 @@
 body,
 html {
   font-family: "Source Sans Pro", sans-serif;
-  background: url('../images/background.jpg');
+  background: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color:#ffffff;
+  color: #ffffff;
   font-size: 20px;
 }
 
@@ -17,30 +17,28 @@ html {
   border-top: 10px solid #f370b8;
   border-bottom: 10px solid #f370b8;
   width: 400px;
-  height: 600px; /* Increased height to accommodate the new fields */
 }
 
 .box h4 {
   font-family: "Source Sans Pro", sans-serif;
   color: #f370b8;
   font-size: 40px;
-  margin-top: 74px; /* Adjusted margin-top */
+  margin-top: 30px; /* Adjusted margin-top */
 }
-
 
 .box h5 {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   color: #ffffff;
   letter-spacing: 1.5px;
-  margin-top: -15px;
+  margin-top: -50px;
   margin-bottom: 50px; /* Adjusted margin-bottom */
 }
 
 .box input[type="text"],
 .box input[type="password"] {
   display: block;
-  margin: 10px auto; /* Adjusted margin */
+  margin: 20px auto; /* Adjusted margin */
   background-color: #3b4148;
   border: 0;
   border-radius: 5px;
@@ -56,8 +54,8 @@ html {
 }
 
 ::-webkit-input-placeholder {
-    color: #ffffff;
-  }
+  color: #ffffff;
+}
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
@@ -74,9 +72,9 @@ a {
   text-decoration: none;
 }
 a:hover {
-    color: #129aa1;
-    /* You can adjust the shade of blue to your preference */
-  }
+  color: #129aa1;
+  /* You can adjust the shade of blue to your preference */
+}
 .btn1 {
   border: 0;
   background: #f370b8;
