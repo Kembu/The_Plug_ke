@@ -144,6 +144,11 @@
   height: auto;
 }
 
+a[href="./top-picks.html"] {
+  color: black;
+  text-decoration: none;
+}
+
 /* Styling for review list */
 .review-list {
   display: flex;
