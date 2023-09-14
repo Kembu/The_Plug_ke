@@ -94,6 +94,9 @@ nav {
 .container {
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: #3EB489;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,8 +104,12 @@ nav {
   text-align: center;
 } 
 
+.wide-input {
+  width: 100%;
+}
+
 form .textarea {
-  width: 90%;
+  width: 50%;
   height: 200px;
   overflow: hidden;
   margin-top: 20px;
