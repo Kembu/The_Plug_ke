@@ -3,6 +3,7 @@
 
 * {
   font-family: poppins;
+  box-sizing: content-box;
 }
 
 /** HEADER **/
