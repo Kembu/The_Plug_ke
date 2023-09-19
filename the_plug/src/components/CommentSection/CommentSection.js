@@ -55,6 +55,30 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderColor: "#333333",
   },
+  ratingInput: {
+    display: "none",
+  },
+  ratingLabel: {
+    fontSize: "40px",
+    color: "#eeeeee",
+    padding: "2px",
+    float: "right",
+    transition: "all 0.2s ease",
+  },
+  ratingLabelHover: {
+    ":not(:checked) ~ label:hover, input:not(:checked) ~ label:hover ~ label": {
+      color: "#fd4",
+    },
+  },
+  ratingLabelChecked: {
+    ":checked ~ label": {
+      color: "#fd4",
+    },
+    "#rate-1:checked ~ label": {
+      color: "#fe7",
+      textShadow: "0 0 20px #952",
+    },
+  },
   btn: {
     height: "45px",
     width: "100%",
@@ -90,18 +114,14 @@ class CommentSection extends Component {
               <div className={css(styles.businessName)}>
                 <label className={css(styles.businessName)}>
                   Enter a business name
-                  <button>
-                    <i FontAwesomeIcon icon={faBuilding}></i>
-                  </button>
+                    <FontAwesomeIcon icon={faBuilding} />
                 </label>
                 <input type="text" name="business_name" className={css(styles.wideInput)} autoComplete="off" />
               </div>
               <div className={css(styles.businessLink)}>
                 <label className={css(styles.businessLink)}>
                   Enter a business link
-                  <button>
-                    <i FontAwesomeIcon icon={faGlobe}></i>
-                  </button>
+                    <FontAwesomeIcon icon={faGlobe} />
                 </label>
                 <input type="text" name="business_link" className={css(styles.wideInput)} autoComplete="off" />
               </div>
@@ -111,16 +131,16 @@ class CommentSection extends Component {
             </div>
             <div className={css(styles.wrapper)}>
               <div className={css(styles.rating)}>
-                <input type="radio" name={css(styles.rating)} id="rate-1" />
-                <label htmlFor="rate-1" className="fas fa-star"><i FontAwesomeIcon icon={faStar}></i></label>
-                <input type="radio" name={css(styles.rating)} id="rate-2" />
-                <label htmlFor="rate-2" className="fas fa-star"><i FontAwesomeIcon icon={faStar}></i></label>
-                <input type="radio" name={css(styles.rating)} id="rate-3" />
-                <label htmlFor="rate-3" className="fas fa-star"><i FontAwesomeIcon icon={faStar}></i></label>
-                <input type="radio" name={css(styles.rating)} id="rate-4" />
-                <label htmlFor="rate-4" className="fas fa-star"><i FontAwesomeIcon icon={faStar}></i></label>
-                <input type="radio" name={css(styles.rating)} id="rate-5" />
-                <label htmlFor="rate-5" className="fas fa-star"><i FontAwesomeIcon icon={faStar}></i></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-1" />
+                <label htmlFor="rate-1" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-2" />
+                <label htmlFor="rate-2" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-3" />
+                <label htmlFor="rate-3" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-4" />
+                <label htmlFor="rate-4" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-5" />
+                <label htmlFor="rate-5" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
               </div>
             </div>
             <div className={css(styles.btn)}>
