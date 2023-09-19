@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css, } from 'aphrodite';
 
 const styles = StyleSheet.create({
   container: {
@@ -79,6 +79,9 @@ const styles = StyleSheet.create({
 });
 
 class Login extends Component {
+  componentDidMount() {
+    document.title = 'Login Page'; 
+  }
   render() {
     return (
       <div className={css(styles.container)}>
@@ -113,9 +116,4 @@ class Login extends Component {
   }
 }
 
-export const LoginPage = () => {
-  <div>
-    <h1>Login Page</h1>
-    <Login />
-  </div>
-}
+export default Login;

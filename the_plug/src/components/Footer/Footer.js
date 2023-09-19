@@ -103,7 +103,7 @@ class Footer extends Component {
         </section>
 
         <p className={css(styles.copyright)}>&copy; 2023 - The Plug ke - All rights reserved</p>
-        <a href="terms_and_conditions.html" className={css(styles.footerNavLink)}>Terms and conditions</a>
+        <a href="termsandconditions" className={css(styles.footerNavLink)}>Terms and conditions</a>
       </footer>
     );
   }

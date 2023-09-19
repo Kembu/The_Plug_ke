@@ -1,18 +1,25 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Hero from '../Hero/Hero';
-import BodySection from '../BodySection/BodySection';
-import Footer from '../Footer/Footer';
-import { Routes } from '../pages/routes';
+import { Routes, Route } from 'react-router-dom';
+import  Login  from '../pages/Login';
+import PageNotFound from '../pages/PageNotFound';
+import HomePage from '../pages/HomePage';
+import TopPicksPage from '../pages/TopPicksPage';
+import SignUp from '../pages/SignUp';
+import Review from '../pages/Reviews';
+import TermsAndConditions from '../components/TermsAndConditions/TermsAndConditions';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <BodySection />
-      <Footer />
-      <Routes />
+      <Routes>
+        <Route path='/login' element={<Login/>} />
+        <Route path='/404' element={<PageNotFound/>} />
+        <Route path='/' element={<HomePage/>} /> 
+        <Route path='/topPicks' element={<TopPicksPage/>} />
+        <Route path='/reviews' element={< Review />} />        
+        <Route path='/signup' element={< SignUp/>} />
+        <Route path='/termsAndConditions' element={<TermsAndConditions />} />
+      </Routes>
     </div>
   );
 }

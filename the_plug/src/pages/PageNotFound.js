@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
       background: 'url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif)',
       height: '400px',
       backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
       width: '100%',
     },
     text_center: {
@@ -28,6 +29,9 @@ const styles = StyleSheet.create({
     },
   });
 class PageNotFound extends Component {
+  componentDidMount() {
+    document.title = 'Page Not Found'; 
+  }
   render() {
     return (
       <body>
@@ -53,9 +57,4 @@ class PageNotFound extends Component {
   }
 }
 
-export const ErrorPage = () => {
-  <div>
-    <h1>404, Page Not Found </h1>
-    <ErrorPage />
-  </div>
-}
+export default PageNotFound;

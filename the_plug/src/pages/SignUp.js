@@ -27,6 +27,9 @@ const styles = StyleSheet.create({
 });
 
 class SignUp extends Component {
+  componentDidMount() {
+    document.title = 'Sign Up'; 
+  }
   render() {
     return (
       <div className={css(styles.body)}>
@@ -71,9 +74,4 @@ class SignUp extends Component {
   }
 }
 
-export const SignUpPage = () => {
-  <div>
-    <h1>SignUp Page</h1>
-    <SignUp />
-  </div>
-}
+export default SignUp;
