@@ -41,11 +41,10 @@ class Header extends Component {
       },
       menu: {
         display: 'flex',
-        flexDirection: 'column', // Display menu items in a column
-        alignItems: 'center', // Center menu items horizontally
         listStyle: 'none', // Remove default list styles
         padding: '0', // Remove default list padding
         margin: '0', // Remove default list margin
+        justifyContent: 'flex-end',
       },
       menuItem: {
         margin: '10px',
@@ -58,10 +57,29 @@ class Header extends Component {
       },
       menuLinkHover: {
         backgroundColor: '#3EB489',
-        color: 'white',
+        color: '#ffffff',
         padding: '10px',
       },
-      // ...existing styles...
+      searchBar: {
+        display: 'flex',
+        border: '1px solid #000000',
+        borderRadius: '8px',
+        padding: '8px',
+      },
+      searchInput: {
+        border: 'none',
+        outline: 'none',
+        flexGrow: 1,
+        padding: '4px',
+      },
+      searchButton: {
+        backgroundColor: '#3EB489',
+        color: '#ffffff',
+        border: 'none',
+        borderRadius: '0 4px 4px 0',
+        padding: '4px 8px',
+        cursor: 'pointer',
+      },      
     });
 
     return (

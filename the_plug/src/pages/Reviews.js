@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Reviews from "../components/Reviews/Reviews";
+import CommentSection from "../components/CommentSection/CommentSection";
+
 
 function Review () {
     return (
         <div className="App">
           <Header />
-          <Reviews />
+          <CommentSection />         
           <Footer />
         </div>
       );
