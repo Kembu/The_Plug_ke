@@ -39,27 +39,6 @@ class Header extends Component {
         maxWidth: '100%',
         height: 'auto',
       },
-      menu: {
-        display: 'flex',
-        listStyle: 'none', // Remove default list styles
-        padding: '0', // Remove default list padding
-        margin: '0', // Remove default list margin
-        justifyContent: 'flex-end',
-      },
-      menuItem: {
-        margin: '10px',
-        padding: '10px',
-        fontSize: '20px',
-      },
-      menuLink: {
-        textDecoration: 'none',
-        color: '#333',
-      },
-      menuLinkHover: {
-        backgroundColor: '#3EB489',
-        color: '#ffffff',
-        padding: '10px',
-      },
       searchBar: {
         display: 'flex',
         border: '1px solid #000000',
@@ -79,7 +58,28 @@ class Header extends Component {
         borderRadius: '0 4px 4px 0',
         padding: '4px 8px',
         cursor: 'pointer',
-      },      
+      },
+      menu: {
+        display: 'flex',
+        listStyle: 'none', // Remove default list styles
+        justifyContent: 'flex-end',
+      },
+      menuItem: {
+        margin: '10px',
+        padding: '10px',
+        fontSize: '20px',
+      },
+      menuLink: {
+        color: '#333',  // Default text color
+        padding: '5px',  // Default padding
+        textDecoration: 'none',  // Remove default text underline
+      },
+      menuLinkHover: {
+        backgroundColor: '#3EB489',
+        color: '#ffffff',
+        padding: '10px',
+        textDecorationColor: '#3EB489',
+      },  
     });
 
     return (
@@ -117,69 +117,69 @@ class Header extends Component {
             >
               <FontAwesomeIcon icon={faBars} />
             </button>
+          )}    
+
+          {/* Conditionally render the menu items based on screen size */}
+          {window.innerWidth <= 768 ? (
+            this.state.isMenuOpen ? (
+              <div className={css(styles.menuContainer)}>
+                <ul className={css(styles.menu)}>
+                  <li className={css(styles.menuItem)}>
+                    <a
+                      className={css(styles.menuLink)}
+                      href="./reviews"
+                    >
+                      Write a review
+                    </a>
+                  </li>
+                  <li className={css(styles.menuItem)}>
+                    <a
+                      className={css(styles.menuLink)}
+                      href="./login"
+                    >
+                      Login
+                    </a>
+                  </li>
+                  <li className={css(styles.menuItem)}>
+                    <a
+                      className={css(styles.menuLink)}
+                      href="./signup"
+                    >
+                      Signup
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ) : null
+          ) : (
+            <ul className={css(styles.menu)}>
+              <li className={css(styles.menuItem)}>
+                <a
+                  className={css(styles.menuLink)}
+                  href="./reviews"
+                >
+                  Write a review
+                </a>
+              </li>
+              <li className={css(styles.menuItem)}>
+                <a
+                  className={css(styles.menuLink)}
+                  href="./login"
+                >
+                  Login
+                </a>
+              </li>
+              <li className={css(styles.menuItem)}>
+                <a
+                  className={css(styles.menuLink)}
+                  href="./signup"
+                >
+                  Signup
+                </a>
+              </li>
+            </ul>
           )}
         </div>
-
-        {/* Conditionally render the menu items based on screen size */}
-        {window.innerWidth <= 768 ? (
-          this.state.isMenuOpen ? (
-            <div className={css(styles.menuContainer)}>
-              <ul className={css(styles.menu)}>
-                <li className={css(styles.menuItem)}>
-                  <a
-                    className={css(styles.menuLink)}
-                    href="./reviews"
-                  >
-                    Write a review
-                  </a>
-                </li>
-                <li className={css(styles.menuItem)}>
-                  <a
-                    className={css(styles.menuLink)}
-                    href="./login"
-                  >
-                    Login
-                  </a>
-                </li>
-                <li className={css(styles.menuItem)}>
-                  <a
-                    className={css(styles.menuLink)}
-                    href="./signup"
-                  >
-                    Signup
-                  </a>
-                </li>
-              </ul>
-            </div>
-          ) : null
-        ) : (
-          <ul className={css(styles.menu)}>
-            <li className={css(styles.menuItem)}>
-              <a
-                className={css(styles.menuLink)}
-                href="./reviews"
-              >
-                Write a review
-              </a>
-            </li>
-            <li className={css(styles.menuItem)}>
-              <a
-                className={css(styles.menuLink)}
-                href="./login"
-              >
-                Login
-              </a>
-            </li>
-            <li className={css(styles.menuItem)}>
-              <a
-                className={css(styles.menuLink)}
-                href="./signup"
-              >
-                Signup
-              </a>
-            </li>
-          </ul>
-        )}
       </header>
     );
   }
