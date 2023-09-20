@@ -15,8 +15,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
-
   container: {
     display: "flex",
     alignItems: "center",
@@ -40,9 +38,9 @@ const styles = StyleSheet.create({
     width: "330px",
   },
   h4: {
-    fontSize: "30px",
+    fontSize: "40px",
     textAlign: "center", // Center horizontally
-    marginTop: "10px",
+    marginTop: "2px",
     color: "#f370b8",
   },
   h5: {
@@ -50,11 +48,9 @@ const styles = StyleSheet.create({
     fontSize: "15px",
     color: "#ffffff",
     letterSpacing: "1.5px",
-    margin: "0", // Remove marginTop and marginBottom
     display: "flex",
-    alignItems: "center", // Center vertically
-    justifyContent: "center", // Center horizontally
-    height: "100%", // Ensure the container takes up the full height
+    alignItems: "center", 
+    justifyContent: "center", 
   },
 
   input: {
@@ -98,9 +94,7 @@ const styles = StyleSheet.create({
     },
   },
   forgetpass: {
-    // position: 'right',
     float: "right",
-    // right: '30px',
   },
 });
 
@@ -130,7 +124,7 @@ class Login extends Component {
               autoComplete="off"
               className={css(styles.input)}
             />
-            <a href="#" className={css(styles.forgetpass)}>
+            <a href="/forgetpass" className={css(styles.forgetpass)}>
               Forgot Password?
             </a>
             <input type="submit" value="Log In" className={css(styles.btn1)} />

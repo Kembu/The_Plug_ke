@@ -73,12 +73,12 @@ class Header extends Component {
         color: '#333',  // Default text color
         padding: '5px',  // Default padding
         textDecoration: 'none',  // Remove default text underline
-      },
-      menuLinkHover: {
-        backgroundColor: '#3EB489',
-        color: '#ffffff',
-        padding: '10px',
-        textDecorationColor: '#3EB489',
+        ":hover": {
+          backgroundColor: '#3EB489',
+          color: '#ffffff',
+          padding: '10px',
+          textDecorationColor: '#3EB489',
+          },
       },  
     });
 

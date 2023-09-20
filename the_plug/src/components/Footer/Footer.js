@@ -37,9 +37,9 @@ class Footer extends Component {
         color: '#fff',
         textDecoration: 'none',
         marginLeft: '10px', /* Add spacing between "Copyright" and the link */
-      },
-      footerNavLinkHover: {
-        textDecoration: 'underline',
+        ":hover": {
+          textDecoration: 'underline',
+        },
       },
     });
 

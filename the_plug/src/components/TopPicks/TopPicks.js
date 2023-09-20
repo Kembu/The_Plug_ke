@@ -27,10 +27,10 @@ const styles = StyleSheet.create({
     color: "#0077cc",
     fontWeight: "bold",
     display: "block",
-  },
-  weeklyPicksLinkHover: {
+    ":hover": {
     textDecoration: "underline",
     color: "#0055aa",
+    },
   },
   weeklyPicksImage: {
     maxWidth: "100%",

@@ -36,16 +36,15 @@ const styles = StyleSheet.create({
     fontFamily: '"Source Sans Pro", sans-serif',
     color: "#f370b8",
     fontSize: "40px",
-    marginTop: "100px",
+    margin: "5px",
   },
 
   boxH5: {
     fontFamily: '"Source Sans Pro", sans-serif',
-    fontSize: "10px",
+    fontSize: "15px",
     color: "#ffffff",
     letterSpacing: "1.5px",
-    marginTop: "-80px",
-    marginBottom: "70px",
+    marginBottom: "20px",
   },
 
   boxInput: {
@@ -55,10 +54,16 @@ const styles = StyleSheet.create({
     border: "0",
     borderRadius: "5px",
     padding: "14px 10px",
-    width: "100%",
+    width: "95%",
     outline: "0",
     color: "#ffffff",
     transition: "all 0.2s ease-out",
+    "::placeholder": {
+      color: "#ffffff",
+    },
+    ":focus": {
+      border: "1px solid #79a6fe",
+    },
   },
 
   inputPlaceholder: {
@@ -86,17 +91,23 @@ const styles = StyleSheet.create({
     border: "0",
     background: "#f370b8",
     color: "#dfdeee",
-    borderRadius: "7px",
+    borderRadius: "10px",
     width: "340px",
     height: "49px",
     fontSize: "16px",
     transition: "0.3s",
     cursor: "pointer",
-    marginTop: "20px",
+    margin: "10px",
+    ":hover": {
+      background: "#129aa1",
+    },
   },
-
-  btn1Hover: {
-    background: "#129aa1",
+  theLink: {
+    color: "#f370b8",
+    textDecoration: "none",
+    ":hover": {
+      color: "#129aa1",
+    },
   },
 });
 
@@ -146,6 +157,7 @@ class SignUp extends Component {
           errorMessage += ` Error code: ${response.status}, Message: ${data.message}`;
         } else {
           errorMessage += ` Error code: ${response.status}`;
+          // console.log(`something`);
         }
         this.setState({ registrationMessage: errorMessage });
       }
@@ -201,7 +213,7 @@ class SignUp extends Component {
             />
             <p>
               Already have an account?{" "}
-              <a href="http://localhost:3000/login" className={css(styles.link)}>
+              <a href="http://localhost:3000/login" className={css(styles.theLink)}>
                 Log In
               </a>
             </p>
