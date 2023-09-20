@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     marginTop: "20px",
     marginBottom: "20px",
+    ":hover": {
+        cursor: "pointer",
+        backgroundColor: "#eeeeee",
+    },
   },
   text: {
     height: "100%",
@@ -44,10 +48,6 @@ const styles = StyleSheet.create({
     padding: "10px",
     fontSize: "17px",
     resize: "none",
-  },
-  textareaHover: {
-    cursor: "pointer",
-    backgroundColor: "#eeeeee",
   },
   textareaFocus: {
     cursor: "text",
@@ -64,14 +64,10 @@ const styles = StyleSheet.create({
     padding: "2px",
     float: "right",
     transition: "all 0.2s ease",
-  },
-  ratingLabelHover: {
     ":not(:checked) ~ label:hover, input:not(:checked) ~ label:hover ~ label": {
       color: "#fd4",
     },
-  },
-  ratingLabelChecked: {
-    ":checked ~ label": {
+   ":checked ~ label": {
       color: "#fd4",
     },
     "#rate-1:checked ~ label": {
@@ -95,11 +91,11 @@ const styles = StyleSheet.create({
     cursor: "pointer",
     transition: "all 0.3s ease",
     marginTop: "20px",
-  },
-  btnButtonHover: {
-    background: "#1b1b1b",
-  },
-
+    ":hover": {
+      background: "#d2b48c",
+      color: "#c3b1e1",
+    },
+  }
 });
 class CommentSection extends Component {
   render() {
@@ -131,16 +127,16 @@ class CommentSection extends Component {
             </div>
             <div className={css(styles.wrapper)}>
               <div className={css(styles.rating)}>
-                <input type="radio" name={css(styles.ratingInput)} id="rate-1" />
-                <label htmlFor="rate-1" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
-                <input type="radio" name={css(styles.ratingInput)} id="rate-2" />
-                <label htmlFor="rate-2" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
-                <input type="radio" name={css(styles.ratingInput)} id="rate-3" />
-                <label htmlFor="rate-3" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
-                <input type="radio" name={css(styles.ratingInput)} id="rate-4" />
-                <label htmlFor="rate-4" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
                 <input type="radio" name={css(styles.ratingInput)} id="rate-5" />
                 <label htmlFor="rate-5" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-4" />
+                <label htmlFor="rate-4" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-3" />
+                <label htmlFor="rate-3" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-2" />
+                <label htmlFor="rate-2" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
+                <input type="radio" name={css(styles.ratingInput)} id="rate-1" />
+                <label htmlFor="rate-1" clasName={css(styles.ratingLabel)}> <FontAwesomeIcon icon={faStar} /></label>
               </div>
             </div>
             <div className={css(styles.btn)}>
