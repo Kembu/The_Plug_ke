@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, css } from "aphrodite";
 
+// Define your CSS styles using Aphrodite
 const styles = StyleSheet.create({
   body: {
     fontFamily: '"Source Sans Pro", sans-serif',
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
     color: "#ffffff",
     fontSize: "20px",
     margin: "0",
-    minHeight: "100vh",
+    minHeight: "100vh", // Ensure the body covers the entire viewport height
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -98,72 +99,23 @@ const styles = StyleSheet.create({
   btn1Hover: {
     background: "#129aa1",
   },
+
+  // forgetPass: {
+  //   position: 'relative',
+  //   float: 'right',
+  //   right: '28px',
+  // },
 });
 
 class SignUp extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "",
-      email: "",
-      password: "",
-      registrationMessage: "",
-    };
-  }
-
   componentDidMount() {
     document.title = "Sign Up";
   }
-
-  handleInputChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: this.state.name,
-          email: this.state.email,
-          password: this.state.password,
-        }),
-      });
-
-      if (response.status === 201) {
-        this.setState({ registrationMessage: 'User registered successfully' });
-      } else {
-        let errorMessage = 'Registration failed.';
-        if (response.status === 400) {
-          const data = await response.json(); // Parse JSON response
-          errorMessage += ` Error code: ${response.status}, Message: ${data.message}`;
-        } else {
-          errorMessage += ` Error code: ${response.status}`;
-        }
-        this.setState({ registrationMessage: errorMessage });
-      }
-    } catch (error) {
-      console.error(error);
-      this.setState({ registrationMessage: 'Server error. Please try again later.' });
-    }
-  };
-
   render() {
     return (
       <div className={css(styles.body)}>
         <div className={css(styles.container)}>
-          <form
-            name="form1"
-            className={css(styles.formContainer)}
-            onSubmit={this.handleSubmit}
-          >
+          <form name="form1" className={css(styles.box)} method="post">
             <h4 className={css(styles.boxH4)}>Sign Up</h4>
             <h5 className={css(styles.boxH5)}>Create your account.</h5>
             <input
@@ -171,18 +123,14 @@ class SignUp extends Component {
               name="name"
               placeholder="Full Name"
               autoComplete="off"
-              className={css(styles.boxInput)}
-              onChange={this.handleInputChange}
-              required
+              className={css(styles.box, styles.input)}
             />
             <input
               type="text"
               name="email"
               placeholder="Email"
               autoComplete="off"
-              className={css(styles.boxInput)}
-              onChange={this.handleInputChange}
-              required
+              className={css(styles.box, styles.input)}
             />
             <input
               type="password"
@@ -190,24 +138,15 @@ class SignUp extends Component {
               placeholder="Password"
               id="pwd"
               autoComplete="off"
-              className={css(styles.boxInput)}
-              onChange={this.handleInputChange}
-              required
+              className={css(styles.forgetPass)}
             />
-            <input
-              type="submit"
-              value="Sign Up"
-              className={css(styles.btn1)}
-            />
+            <input type="submit" value="Sign Up" className={css(styles.btn1)} />
             <p>
               Already have an account?{" "}
-              <a href="http://localhost:3000/login" className={css(styles.link)}>
+              <a href="http://localhost:3000/login" className="link">
                 Log In
               </a>
             </p>
-            {this.state.registrationMessage && (
-              <p>{this.state.registrationMessage}</p>
-            )}
           </form>
         </div>
       </div>

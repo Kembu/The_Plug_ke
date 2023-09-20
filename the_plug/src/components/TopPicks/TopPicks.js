@@ -96,7 +96,7 @@ class TopPicks extends Component {
                   <h3>Events of the week</h3>
                 </a>
               </li>
-            </ul>
+            </ul>            
           </div>
         </section>
       </div>
