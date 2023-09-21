@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import Footer from "../components/Footer/Footer";
-import TopPicks from "../components/CommonImports/CommonImports";
+import TopPicks from "../components/TopPicks/TopPicksHome";
 import Reviews from "../components/Reviews/Reviews";
 
 function HomePage() {

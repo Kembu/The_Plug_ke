@@ -53,7 +53,7 @@ class TopPicks extends Component {
       <div>
         <section className={css(styles.mainBody)}>
           <div className={css(styles.weeklyPicksContainer)}>
-            <a href="/topPicks" className={css(styles.topPicksLink)}>
+            <a href="/topPicksPage" className={css(styles.topPicksLink)}>
               <h2 className={css(styles.heading)}>Top Picks Of The Week</h2>
             </a>
             <ul className={css(styles.weeklyPicksList)}>

@@ -7,6 +7,7 @@ import TopPicksPage from '../pages/TopPicksPage';
 import SignUp from '../pages/SignUp';
 import Review from '../pages/Reviews';
 import TermsAndConditions from '../components/TermsAndConditions/TermsAndConditions';
+import BusinessReviews from '../pages/BusinessReviews';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path='/reviews' element={< Review />} />        
         <Route path='/signup' element={< SignUp/>} />
         <Route path='/termsAndConditions' element={<TermsAndConditions />} />
+        <Route path='/BusinessReviewsPage' element={<BusinessReviews />} />
+        <Route path='/topPicksPage' element={<TopPicksPage />} />
       </Routes>
     </div>
   );
