@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     display: "block",
     ":hover": {
-    textDecoration: "underline",
-    color: "#0055aa",
+      textDecoration: "underline",
+      color: "#0055aa",
     },
   },
   weeklyPicksImage: {
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 
 class TopPicks extends Component {
   componentDidMount() {
-    document.title = 'Top Picks'; 
+    document.title = "Top Picks";
   }
   render() {
     return (
@@ -59,7 +59,8 @@ class TopPicks extends Component {
             <ul className={css(styles.weeklyPicksList)}>
               <li className={css(styles.weeklyPicksItem)}>
                 <a
-                  href="/topPicks"
+                  href="https://www.tiktok.com/@nairobidisclosure?_t=8frtcG6mtYE&_r=1"
+                  target="_blank"
                   className={css(styles.weeklyPicksLink)}
                 >
                   <img
@@ -72,7 +73,8 @@ class TopPicks extends Component {
               </li>
               <li className={css(styles.weeklyPicksItem)}>
                 <a
-                  href="/topPicks"
+                  href="https://cinema.angacinemas.com/schedule"
+                  target="_blank"
                   className={css(styles.weeklyPicksLink)}
                 >
                   <img
@@ -85,7 +87,8 @@ class TopPicks extends Component {
               </li>
               <li className={css(styles.weeklyPicksItem)}>
                 <a
-                  href="/topPicks"
+                  href="https://allevents.in/nairobi/music"
+                  target="_blank"
                   className={css(styles.weeklyPicksLink)}
                 >
                   <img
@@ -96,7 +99,51 @@ class TopPicks extends Component {
                   <h3>Events of the week</h3>
                 </a>
               </li>
-            </ul>            
+            </ul>
+            <ul className={css(styles.weeklyPicksList)}>
+              <li className={css(styles.weeklyPicksItem)}>
+                <a
+                  href="https://mydawa.com/"
+                  target="_blank"
+                  className={css(styles.weeklyPicksLink)}
+                >
+                  <img
+                    src="./Pharmacy.jpg"
+                    alt="Online Pharmacy"
+                    className={css(styles.weeklyPicksImage)}
+                  />
+                  <h3>Online Pharmacy</h3>
+                </a>
+              </li>
+              <li className={css(styles.weeklyPicksItem)}>
+                <a
+                  href="https://www.kaiandkaro.com/"
+                  target="_blank"
+                  className={css(styles.weeklyPicksLink)}
+                >
+                  <img
+                    src="./Cars.jpg"
+                    alt="Car Sales"
+                    className={css(styles.weeklyPicksImage)}
+                  />
+                  <h3>Car Sales</h3>
+                </a>
+              </li>
+              <li className={css(styles.weeklyPicksItem)}>
+                <a
+                  href="https://www.tacc.co.ke/product-cat/furniture-homeware/kitchenware/tableware/crockery-cutlery/"
+                  target="_blank"
+                  className={css(styles.weeklyPicksLink)}
+                >
+                  <img
+                    src="./Cutlery.jpg"
+                    alt="Cutlery one stop shop"
+                    className={css(styles.weeklyPicksImage)}
+                  />
+                  <h3>Cutlery one stop shop</h3>
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
