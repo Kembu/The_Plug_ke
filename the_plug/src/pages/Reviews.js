@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header/Header";
+import ReviewHeader from "../components/Header/ReviewHeader";
 import Footer from "../components/Footer/Footer";
 import CommentSection from "../components/CommentSection/CommentSection";
 
@@ -7,7 +7,7 @@ import CommentSection from "../components/CommentSection/CommentSection";
 function Review () {
     return (
         <div className="App">
-          <Header />
+          <ReviewHeader />
           <CommentSection />         
           <Footer />
         </div>
